@@ -1,11 +1,15 @@
 import React from 'react'
 import './Counter.css'
 
-const Counter = ({ title, number }) => {
+const Counter = ({ title, number, eventColor }) => {
   return (
     <div className='counter'>
-        <p className='counter-number'>{number}</p>
-        <p className='counter-text'>{title}</p>
+        <p className='counter-number' style={{ background: eventColor }}>
+          {number}
+        </p>
+        <p className='counter-text' style={{ color: eventColor }}>
+          {title}
+        </p>
     </div>
   )
 }
